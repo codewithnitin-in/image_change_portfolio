@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://kit.fontawesome.com/a8e06f3875.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            background: #f0f3fd;
+            position: relative;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            top: 0;
+            position: fixed;
+            left: 0;
+            padding: 30px 10px;
+            align-items: center;
+            z-index: 100;
+            width: 100%;
+            background-color: transparent;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            margin-right: auto;
+        }
+
+        .navbar a {
+            font-size: 18px;
+            color: #333;
+            font-weight: 500;
+            margin-right: 35px;
+            transition: .5s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: #37a1f2;
+        }
+
+        .toggle-icon {
+            display: flex;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .toggle-icon.disabled {
+            pointer-events: none;
+        }
+
+        .home {
+            height: 100vh;
+            display: flex;
+            padding: 60px 10% 0;
+        }
+
+        .home-content {
+            max-width: 600px;
+        }
+
+        .home-content h1 {
+            font-size: 56px;
+            line-height: 1.2;
+        }
+
+        .home-content h3 {
+            font-size: 32px;
+        }
+
+        .home-content h3 span {
+            color: #37a1f2;
+        }
+
+        .home-content p {
+            font-size: 16px;
+            margin: 15px 0;
+        }
+
+        .socal-media a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border-radius: 50%;
+            border: 2px solid #37a1f2;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            font-size: 20px;
+            transition: .5s;
+            color: #37a1f2;
+            margin: 5px 15px 25px 0;
+        }
+
+        .socal-media a:hover {
+            background: #37a1f2;
+            color: white;
+        }
+
+        .btn {
+            display: inline-flex;
+            padding: 11px 32px;
+            background: #37a1f2;
+            border: 2px solid #37a1f2;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            font-size: 16px;
+            color: #f0f3fd;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: .5s;
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: #37a1f2;
+        }
+
+        .home-img img {
+            position: absolute;
+            bottom: 0;
+            top: 8rem;
+            right: 30px;
+            width: 35%;
+            pointer-events: none;
+        }
+
+        #dark-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #15202b;
+            color: #f0f3fd;
+        }
+
+        #dark-container .logo,
+        #dark-container .navbar a {
+            color: #f0f3fd;
+        }
+
+        #dark-container .navbar a:hover,
+        #dark-container .navbar a.active {
+            color: #37a1f2;
+        }
+
+        #container,
+        #dark-container {
+            clip-path: circle(0% at 0 0);
+            transition-delay: 1.5s;
+        }
+
+        .active#container,
+        .active#dark-container {
+            z-index: 1;
+            clip-path: circle(150% at 0 0);
+            transition: 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition-delay: 0s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container active" id="container">
+        <header class="header">
+            <a href="#" class="logo">Eloise..</a>
+            <nav class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Skills</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="toggle-icon">
+                <i class='bx bx-moon'></i>
+            </div>
+        </header>
+        <section class="home">
+            <div class="home-content">
+                <h3>Hello, It's Me</h3>
+                <h1>Nitin Kumar Solanki</h1>
+                <h3>And I'm a<span>Web Developer</span></h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias quam, error saepe fugit iure at
+                    dolores officiis rerum! Vel exercitationem at similique porro ducimus minus, nostrum
+                    necessitatibus officia fugit, quisquam voluptate, quae alias excepturi repellat?</p>
+                <div class="socal-media">
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                <a href="#" class="btn">Download CV</a>
+            </div>
+            <div class="home-img">
+                <img src="color.png" alt="">
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container')
+
+        const cloneContainer = container.cloneNode(true)
+        cloneContainer.id = 'dark-container';
+
+        document.body.appendChild(cloneContainer);
+        cloneContainer.classList.remove('active');
+
+        const toggleIcons = document.querySelectorAll(".toggle-icon")
+        const icons = document.querySelectorAll('.toggle-icon i ')
+        const darkContainer = document.querySelector('#dark-container')
+
+        // Wait for the darkContainerImg element to be available inside the darkContainer
+        darkContainer.addEventListener('transitionend', () => {
+            const darkContainerImg = document.querySelector('#dark-container .home-img img');
+            darkContainerImg.src = "darkimg.png";
+        });
+
+        toggleIcons.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                toggle.classList.add('disabled');
+                setTimeout(() => {
+                    toggle.classList.remove('disabled')
+                }, 1500);
+
+                icons.forEach(icon => {
+                    icon.classList.toggle('bx-sun')
+                });
+
+                container.classList.toggle('active');
+                darkContainer.classList.toggle('active');
+            })
+        })
+    </script>
+</body>
+
+</html>
